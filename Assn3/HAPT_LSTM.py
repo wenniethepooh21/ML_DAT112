@@ -75,7 +75,6 @@ y_test = ku.to_categorical(y_test_unravel)
 
 #Build the model
 print("Building the LSTM network.")
-output_size = len(HAPTData['ID'].unique()) + 1
 model = km.Sequential()
 model.add(kl.LSTM(200, input_shape = (X_train.shape[1], num_features)))
 #add a dropout step to drop 50% of the nodes to sample from
